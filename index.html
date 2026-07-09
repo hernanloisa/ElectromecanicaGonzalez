@@ -89,7 +89,8 @@ section{padding:76px 0}
 
 /* servicios */
 .servicios{background:var(--blanco)}
-.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-serv{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
+.grid-serv .card{width:calc((100% - 44px)/3)}
 .card{background:var(--hueso);border:1px solid var(--linea);border-radius:12px;padding:28px 26px;transition:border-color .15s ease,transform .15s ease}
 .card:hover{border-color:var(--cobre);transform:translateY(-3px)}
 .card .icono{width:48px;height:48px;border-radius:10px;background:var(--acero);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
@@ -144,7 +145,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:22p
   .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:60px}
   .bobinado{order:-1}
   .bobinado svg{width:min(240px,60vw)}
-  .grid-serv{grid-template-columns:1fr 1fr}
+  .grid-serv .card{width:calc((100% - 22px)/2)}
   .somos .wrap{grid-template-columns:1fr;gap:32px}
   .grid-ubi{grid-template-columns:1fr}
   .grid-cont{grid-template-columns:1fr 1fr}
@@ -154,7 +155,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:22p
   .menu-btn{display:block}
 }
 @media (max-width:560px){
-  .grid-serv{grid-template-columns:1fr}
+  .grid-serv .card{width:100%}
   .grid-cont{grid-template-columns:1fr}
   .topbar .wrap{justify-content:center;text-align:center}
   .franja .wrap{flex-direction:column;gap:10px}
